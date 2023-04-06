@@ -9,11 +9,7 @@ import {
 } from '../types/schema';
 import { ZERO_ADDRESS, BIGINT_ZERO, BIGINT_ONE } from './constants';
 
-export function getOrCreateAccount(
-  id: string,
-  createIfNotFound = true,
-  save = true,
-): Account {
+export function getOrCreateAccount(id: string, createIfNotFound = true, save = true): Account {
   let tokenHolder = Account.load(id);
 
   if (tokenHolder == null && createIfNotFound) {
@@ -62,11 +58,7 @@ export function getOrCreateDelegateWithNullOption(
   return delegate;
 }
 
-export function getOrCreateVote(
-  id: string,
-  createIfNotFound = true,
-  save = false,
-): Vote {
+export function getOrCreateVote(id: string, createIfNotFound = true, save = false): Vote {
   let vote = Vote.load(id);
 
   if (vote == null && createIfNotFound) {
@@ -80,11 +72,7 @@ export function getOrCreateVote(
   return vote as Vote;
 }
 
-export function getOrCreateProposal(
-  id: string,
-  createIfNotFound = true,
-  save = false,
-): Proposal {
+export function getOrCreateProposal(id: string, createIfNotFound = true, save = false): Proposal {
   let proposal = Proposal.load(id);
 
   if (proposal == null && createIfNotFound) {
