@@ -66,6 +66,7 @@ const NavBar = () => {
             </Navbar.Brand>
             {Number(CHAIN_ID) !== 1 && (
               <Nav.Item>
+                {/* {!} edit graphic */}
                 <img className={classes.testnetImg} src={testnetNoun} alt="testnet noun" />
                 TESTNET
               </Nav.Item>
@@ -96,32 +97,6 @@ const NavBar = () => {
               <NavBarButton
                 buttonText={<Trans>DAO</Trans>}
                 buttonIcon={<FontAwesomeIcon icon={faUsers} />}
-                buttonStyle={nonWalletButtonStyle}
-              />
-            </Nav.Link>
-            <Nav.Link
-              href={externalURL(ExternalURL.nounsCenter)}
-              className={classes.nounsNavLink}
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeNav}
-            >
-              <NavBarButton
-                buttonText={<Trans>Docs</Trans>}
-                buttonIcon={<FontAwesomeIcon icon={faBookOpen} />}
-                buttonStyle={nonWalletButtonStyle}
-              />
-            </Nav.Link>
-            <Nav.Link
-              href={externalURL(ExternalURL.discourse)}
-              className={classes.nounsNavLink}
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeNav}
-            >
-              <NavBarButton
-                buttonText={<Trans>Discourse</Trans>}
-                buttonIcon={<FontAwesomeIcon icon={faComments} />}
                 buttonStyle={nonWalletButtonStyle}
               />
             </Nav.Link>

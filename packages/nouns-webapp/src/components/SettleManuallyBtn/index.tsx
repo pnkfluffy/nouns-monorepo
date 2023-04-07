@@ -25,6 +25,7 @@ const SettleManuallyBtn: React.FC<{
   // timer logic
   useEffect(() => {
     // Allow immediate manual settlement when testing
+    // {!} change if deploying on a different chain
     if (CHAIN_ID !== 1) {
       setSettleEnabled(true);
       setAuctionTimer(0);
